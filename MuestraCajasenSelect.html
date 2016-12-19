@@ -14,10 +14,18 @@
         
         <script language="javascript"> 
                 function Revisar() 
-                { 
-                    var x = document.getElementById("ClasificacionTitulos").selectedIndex;
-                    alert(x);        
+                    { 
+                    alert(document.getElementById("ClasificacionTitulos").selectedIndex);
+
+                    if(document.getElementById("ClasificacionTitulos").selectedIndex>=7 && 
+                       document.getElementById("ClasificacionTitulos").selectedIndex<=11) 
+                       {
+                        document.getElementById("CampoClasificacion").type = "text";
+                       }else{
+                             document.getElementById("CampoClasificacion").type = "hidden"; 
+                            }
                 } 
+            
         </script> 
         
     </head>
@@ -50,7 +58,7 @@
                                 <option value="Otros cursos"                                            >Otros cursos</option>
                                 <option value="Sin especificar"                                         >Sin especificar</option>
                 </select>
-                <input type="text" disabled="disabled" />
+                <input id="CampoClasificacion" name="campo" type="hidden" />
               </p>
          
         </div>
