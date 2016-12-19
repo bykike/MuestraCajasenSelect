@@ -13,40 +13,28 @@
         
         
         <script language="javascript"> 
-                function RevisarOtras() 
+                function Revisar() 
                 { 
-                var objAnimal=document.getElementById("Anima... 
-                var objComida=document.getElementById("Comid... 
-
-                if ( objAnimal.options[objAnimal.selectedInde... ) 
-                objComida.selectedIndex = 1; //Selecciona carne 
-                else 
-                objComida.selectedIndex = 0; //Selecciona leche 
+                    var x = document.getElementById("ClasificacionTitulos").selectedIndex;
+                    alert(x);        
                 } 
         </script> 
-        
         
     </head>
     
 <body>
     
 <div class="container">
-
-          
-        <!-- ##########################################################
-        ## Sección Formación 
-        ########################################################### -->
           
         <!-- Formación 1 -->
           
         <p ><strong>Formación</strong> ( Hasta dos tipos de formación. Puedes dejar uno en blanco. )</p>
-
-          
+         
         <div class="cajagris">
             
               <p class="left entradaTxt">
                 <label for="Clasificacion">Clasificación titulación</label>
-                <select class="entradaTxt" name="Clasificacion" data-placeholder="Seleccione clasificación titulación" tabindex="-1" aria-hidden="true" onchange="RevisarOtras()">
+                <select class="entradaTxt" id="ClasificacionTitulos" name="Clasificacion" data-placeholder="Seleccione clasificación titulación" tabindex="-1" aria-hidden="true" onchange="Revisar()">
                                 <option value="" >Seleccione titulación</option>
                                 <option value="Graduado Escolar"                                        >Graduado escolar</option>
                                 <option value="Cert. de escolaridad o de la ESO"                        >Cert. de escolaridad o de la ESO</option>
@@ -56,7 +44,7 @@
                                 <option value="FP2 / Técnico Superior"                                  >FP2 / Técnico Superior</option>
                                 <option value="Diplomatura, ing. téc., arq. téc."                       >Diplomatura, ing. téc., arq. téc.</option>
                                 <option value="Grado"                                                   >Grado</option>
-                                <option value="Licenciado, ingeniero, arquitecto"                       >Licenciado, ingeniero, arquitecto</option>
+                                <option id="A" value="Licenciado, ingeniero, arquitecto"                       >Licenciado, ingeniero, arquitecto</option>
                                 <option value="Master / título propio de postgrado"                     >Master / título postgrado</option>
                                 <option value="Doctorado"                                               >Doctorado</option>
                                 <option value="Otros cursos"                                            >Otros cursos</option>
@@ -68,12 +56,6 @@
         </div>
     </div> 
     
-    
-    
-    
-    
-    
-    
-    
+
   </body>
 </html>
